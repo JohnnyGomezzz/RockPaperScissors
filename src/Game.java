@@ -9,8 +9,10 @@ public class Game {
     }
 
     private void initGame() {
-        System.out.println("Добро пожаловать в игру \"Камень-ножницы-бумага\"!\n" +
-                "Ваш ход!\n");
+        System.out.println("""
+                Добро пожаловать в игру "Камень-ножницы-бумага"!
+                Ваш ход!
+                """);
     }
 
     private void calculation() {
@@ -24,27 +26,27 @@ public class Game {
             System.out.println("Ничья!");
         } else {
             switch (player.getPlayerVar()) {
-                case 1:
+                case 1 -> {
                     if (computer.getComputerVar() == 2) {
                         System.out.println("Вы победили!");
                     } else {
                         System.out.println("Вы проиграли!");
                     }
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     if (computer.getComputerVar() == 3) {
                         System.out.println("Вы победили!");
                     } else {
                         System.out.println("Вы проиграли!");
                     }
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     if (computer.getComputerVar() == 1) {
                         System.out.println("Вы победили!");
                     } else {
                         System.out.println("Вы проиграли!");
                     }
-                    break;
+                }
             }
         }
     }
@@ -52,7 +54,11 @@ public class Game {
     private void endDialog() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\nПовторить?\n1. Да\n2. Нет\n");
+        System.out.println("""
+        Повторить?
+        1. Да
+        2. Нет
+        """);
         String input = scanner.nextLine();
         if (input.equals("1")) {
             start();
