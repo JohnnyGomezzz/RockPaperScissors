@@ -9,10 +9,8 @@ public class Game {
     }
 
     private void initGame() {
-        System.out.println("""
-                Добро пожаловать в игру "Камень-ножницы-бумага"!
-                Ваш ход!
-                """);
+        System.out.println("Добро пожаловать в игру \"Камень-ножницы-бумага\"!" +
+                "Ваш ход!");
     }
 
     private void calculation() {
@@ -54,11 +52,7 @@ public class Game {
     private void endDialog() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("""
-        Повторить?
-        1. Да
-        2. Нет
-        """);
+        System.out.println("Повторить?\n1. Да\n2. Нет");
         String input = scanner.nextLine();
         if (input.equals("1")) {
             start();
