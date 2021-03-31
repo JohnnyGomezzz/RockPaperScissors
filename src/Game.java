@@ -9,8 +9,8 @@ public class Game {
     }
 
     private void initGame() {
-        System.out.println("Добро пожаловать в игру \"Камень-ножницы-бумага\"!" +
-                "Ваш ход!");
+        System.out.println("Добро пожаловать в игру \"Камень-ножницы-бумага\"!\n" +
+                "Ваш ход!\n");
     }
 
     private void calculation() {
@@ -26,23 +26,23 @@ public class Game {
             switch (player.getPlayerVar()) {
                 case 1 -> {
                     if (computer.getComputerVar() == 2) {
-                        System.out.println("Вы победили!");
+                        System.out.println("Вы победили!\n");
                     } else {
-                        System.out.println("Вы проиграли!");
+                        System.out.println("Вы проиграли!\n");
                     }
                 }
                 case 2 -> {
                     if (computer.getComputerVar() == 3) {
-                        System.out.println("Вы победили!");
+                        System.out.println("Вы победили!\n");
                     } else {
-                        System.out.println("Вы проиграли!");
+                        System.out.println("Вы проиграли!\n");
                     }
                 }
                 case 3 -> {
                     if (computer.getComputerVar() == 1) {
-                        System.out.println("Вы победили!");
+                        System.out.println("Вы победили!\n");
                     } else {
-                        System.out.println("Вы проиграли!");
+                        System.out.println("Вы проиграли!\n");
                     }
                 }
             }
@@ -52,11 +52,12 @@ public class Game {
     private void endDialog() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Повторить?\n1. Да\n2. Нет");
+        System.out.println("Повторить?\n1. Да\n2. Нет\n");
         String input = scanner.nextLine();
         if (input.equals("1")) {
             start();
         } else if (input.equals("2")) {
+            System.out.println("До новых встреч!");
             System.exit(0);
         } else {
             System.out.println("Неправильный ввод. Выберите один из вариантов.");
